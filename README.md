@@ -6,3 +6,4 @@
 ## Links
 - **Linkedin** - https://www.linkedin.com/in/henrique-vicente-3bab93358/
 - **Vercel** - https://cp4-calculadora-imc.vercel.app/
+- **GitHub** - https://github.com/hvicente21/cp4-CalculadoraIMC
