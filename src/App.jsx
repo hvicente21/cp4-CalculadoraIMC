@@ -7,25 +7,25 @@ import './css/global.css'
 
 function App() {
 
-  // HOOK- useState - Manipula o estado da variável
+ 
   const [altura, setAltura] = useState();
   const [peso, setPeso] = useState();
   const [resultado, setResultado] = useState();
   const [mostrarResultado, setMostrarResultado] = useState(false);
 
-  // ESTADO CORRIGIDO: A string "neutro" precisa de aspas
+
   const [classificacao, setClassificacao] = useState("neutro");
 
 
-  //CRIANDO A FUNÇÃO CALCULAR IMC
+
   const calcularImc = (e) => {
-    e.preventDefault(); //evita o recarregamento da página
+    e.preventDefault(); 
     if (altura > 0 && peso > 0) {
       const imc = peso / (altura * altura);
-      setResultado(imc.toFixed(2)); //arrendonda para 2 casas decimais
+      setResultado(imc.toFixed(2));
       setMostrarResultado(true);
 
-      // A LÓGICA DE CLASSIFICAÇÃO DEVE FICAR AQUI DENTRO!
+
       if (imc < 18.5) {
         setClassificacao('abaixo');
       } else if (imc >= 18.5 && imc <= 24.9) {
@@ -39,15 +39,12 @@ function App() {
     } else {
       alert("Por favor digite valores válidos");
       setMostrarResultado(false);
-
-      // Reseta a classificação para neutro em caso de erro
       setClassificacao('neutro');
     }
   }
 
 
   return (
-    // A classe do container é definida pelo estado "classificacao"
     <div className={`container ${classificacao}`}>
       <div className="box">
         <Header />
